@@ -1,0 +1,14 @@
+
+<%= form_for @post do |form| %>
+  <div>
+    <%= form.label :content %><br>
+    <%= form.text_field :content %>
+  </div>
+
+  <%=  collection_select(:post, :author_id, Author.all , :id, :name) %><br>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+

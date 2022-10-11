@@ -1,0 +1,7 @@
+<% @authors.each do |author|%>
+name:	<%= author.name %><br>
+age :	<%= author.age %><br>
+address:	<%= author.address %><br>
+using helper--the author is:	<%= age_author(author) %><br><br>
+<% end %>
+<%= link_to "New Author", new_author_path %>

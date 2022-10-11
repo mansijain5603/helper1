@@ -1,0 +1,12 @@
+<center>
+<%# @posts.all.each do |post|%>
+<% Post.includes(:author).each do |post| %>
+content :<%= post.content %><br>
+author_id :<%= post.author_id %><br>
+name :<%= post.author.name %><br>
+age :<%= post.author.age %><br>
+address :<%= post.author.address %><br>
+<%#= post.author.age_author %>
+the time when of the post was posted:<%= post_time(post) %><br><br>
+<% end %>
+</center>
